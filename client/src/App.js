@@ -1,18 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import {Link, BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
+import Bitcoin from './components/Bitcoin';
+import Ethreum from './components/Ethereum';
 
 function App() {
-  const [initialData, setInitialData] = useState([{}])
-
-  useEffect(()=>{
-    fetch('/test').then(
-      response => response.json()
-    ).then(data => setInitialData(data))
-  }, []);
 
   return (
     <div className="App">
-      <h1>{initialData.BTC}</h1>
+      <Router>
+        <li><Link to={"/BTC"}>BTC</Link></li>
+        <li><Link to={"/ETH"}>ETH</Link></li>
+        <Route path="/BTC" component={Bitcoin} />
+        <Route path="/ETH" component={Ethreum} />
+      </Router>
     </div>
   );
 }
