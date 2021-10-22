@@ -63,6 +63,6 @@ def test():
     eth = get_eth_prices()
 
     return {
-        "BTC":btc,
-        "ETH":eth
+        "BTC":str(btc),
+        "ETH":str(eth)
     }
