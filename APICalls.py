@@ -63,7 +63,7 @@ def get_eth_prices():
 
 def display_as_string(price_data):
     if price_data[0] == -1:
-        return "An error occurred when retrieveing price, try again later!"
+        return "An error occurred when retrieveing price, try refreshing!"
     
     return "${} - {}".format(price_data[0], price_data[1])
 

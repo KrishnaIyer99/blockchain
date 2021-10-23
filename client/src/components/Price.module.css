@@ -23,3 +23,24 @@
     background-image: url(EthereumWallpaper.png);
     margin: auto;
 }
+
+.footer{
+    width:100%;
+    background-color:rgb(213, 215, 238);
+    text-align: left;
+}
+
+.header{
+    width:100%;
+    background-color:rgb(213, 215, 238);
+    text-align: left;
+}
+
+.body{
+    width: 50%;
+    text-align: center;
+    margin:auto;
+    background-color:peachpuff;
+    position: relative;
+    bottom: 10px;
+}
