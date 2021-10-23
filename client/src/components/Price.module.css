@@ -1,0 +1,25 @@
+.bitcoin {
+    background-color: cornsilk;
+    width:33%;
+    margin: auto;
+    padding: 25px;
+}
+
+.background_btc{
+    width:100%;
+    background-image: url(bitcoinLogoWallpaper.png);
+    margin: auto;
+}
+
+.ethereum {
+    background-color: cornsilk;
+    width:33%;
+    margin: auto;
+    padding: 25px;
+}
+
+.background_eth{
+    width:100%;
+    background-image: url(EthereumWallpaper.png);
+    margin: auto;
+}

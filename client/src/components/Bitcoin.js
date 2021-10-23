@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import BitcoinCSS from './Price.module.css'
 
 function Bitcoin(){
 
@@ -11,11 +12,13 @@ function Bitcoin(){
     }, []);
 
     return (
-        <div className="Bitcoin">
+      <div className={BitcoinCSS.background_btc}>
+        <div className={BitcoinCSS.bitcoin}>
             <h1>Bitcoin!</h1>
             <h2>BUY: {initialData.BUY}</h2> 
             <h2>SELL: {initialData.SELL}</h2> 
         </div>
+      </div>
     );
 }
 

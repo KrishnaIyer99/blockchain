@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <li><Link to={"/BTC"}>BTC</Link></li>
-        <li><Link to={"/ETH"}>ETH</Link></li>
         <Route path="/BTC" component={Bitcoin} />
         <Route path="/ETH" component={Ethreum} />
+        <li><Link to={"/BTC"}>BTC</Link></li>
+        <li><Link to={"/ETH"}>ETH</Link></li>
       </Router>
     </div>
   );
