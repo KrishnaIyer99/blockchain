@@ -109,3 +109,11 @@ def display_eth_data():
         "BUY":display_as_string(prices["BUY"]),
         "SELL":display_as_string(prices["SELL"])
     }
+
+@app.route("/DOGE_PRICE")
+def display_doge_data():
+    prices = get_doge_prices()
+    return {
+        "BUY":display_as_string(prices["BUY"]),
+        "SELL":display_as_string(prices["SELL"])
+    }

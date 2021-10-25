@@ -24,6 +24,19 @@
     margin: auto;
 }
 
+.dogecoin {
+    background-color: cornsilk;
+    width:33%;
+    margin: auto;
+    padding: 25px;
+}
+
+.background_doge{
+    width:100%;
+    background-image: url(DogecoinWallpaper.jpg);
+    margin: auto;
+}
+
 .footer{
     width:100%;
     background-color:rgb(213, 215, 238);
