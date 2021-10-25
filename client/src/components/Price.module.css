@@ -7,7 +7,7 @@
 
 .background_btc{
     width:100%;
-    background-image: url(bitcoinLogoWallpaper.png);
+    background-image: url(images/bitcoinLogoWallpaper.png);
     margin: auto;
 }
 
@@ -20,7 +20,7 @@
 
 .background_eth{
     width:100%;
-    background-image: url(EthereumWallpaper.png);
+    background-image: url(images/EthereumWallpaper.png);
     margin: auto;
 }
 
@@ -33,7 +33,7 @@
 
 .background_doge{
     width:100%;
-    background-image: url(DogecoinWallpaper.jpg);
+    background-image: url(images/DogecoinWallpaper.jpg);
     margin: auto;
 }
 
