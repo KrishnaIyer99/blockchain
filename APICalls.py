@@ -83,7 +83,7 @@ def display_as_string(price_data):
     if price_data[0] == -1:
         return "An error occurred when retrieveing price, try refreshing!"
     
-    return "${} - {}".format(price_data[0], price_data[1])
+    return "${} USD - {}".format(price_data[0], price_data[1])
 
 @app.route("/")
 def home():
@@ -117,3 +117,31 @@ def display_doge_data():
         "BUY":display_as_string(prices["BUY"]),
         "SELL":display_as_string(prices["SELL"])
     }
+
+@app.route("/BTC_ALL")
+def display_btc_raw_data():
+    btc_prices = requests.get("http://api.coincap.io/v2/assets/bitcoin/markets").json()
+    btc_prices_df = data_processing(btc_prices)
+    btc_prices_df = btc_prices_df.loc[btc_prices_df['baseSymbol'] == "BTC"]
+    btc_prices_df = btc_prices_df.round({'priceUsd':2})
+    btc_prices_df = btc_prices_df.sort_values(by=['priceUsd'])
+    return btc_prices_df.to_html(header="true", columns=['exchangeId', 'baseSymbol', 'quoteSymbol', 'priceUsd'], index=False)
+
+@app.route("/ETH_ALL")
+def display_eth_raw_data():
+    eth_prices = requests.get("http://api.coincap.io/v2/assets/ethereum/markets").json()
+    eth_prices_df = data_processing(eth_prices)
+    eth_prices_df = eth_prices_df.loc[eth_prices_df['baseSymbol'] == "ETH"]
+    eth_prices_df = eth_prices_df.round({'priceUsd':2})
+    eth_prices_df = eth_prices_df.sort_values(by=['priceUsd'])
+    return eth_prices_df.to_html(header="true", columns=['exchangeId', 'baseSymbol', 'quoteSymbol', 'priceUsd'], index=False)
+
+@app.route("/DOGE_ALL")
+def display_doge_raw_data():
+    doge_prices = requests.get("http://api.coincap.io/v2/assets/dogecoin/markets").json()
+    doge_prices_df = data_processing(doge_prices)
+    doge_prices_df = doge_prices_df.loc[doge_prices_df['baseSymbol'] == "DOGE"]
+    doge_prices_df = doge_prices_df.round({'priceUsd':4})
+    doge_prices_df = doge_prices_df.sort_values(by=['priceUsd'])
+    return doge_prices_df.to_html(header="true", columns=['exchangeId', 'baseSymbol', 'quoteSymbol', 'priceUsd'], index=False)
+
