@@ -5,6 +5,9 @@ import Bitcoin from './components/Bitcoin';
 import Ethreum from './components/Ethereum';
 import Dogecoin from'./components/Dogecoin';
 import CustomCSS from './components/Price.module.css';
+import Bitcoin_raw from './components/Bitcoin_raw';
+import Ethereum_raw from './components/Ethereum_raw';
+import Dogecoin_raw from './components/Dogecoin_raw';
 
 function App() {
 
@@ -18,6 +21,9 @@ function App() {
         <Route path="/BTC" component={Bitcoin} />
         <Route path="/ETH" component={Ethreum} />
         <Route path="/DOGE" component={Dogecoin} />
+        <Route path="/BTC_RAW" component={Bitcoin_raw}/>
+        <Route path="/ETH_RAW" component={Ethereum_raw}/>
+        <Route path="/DOGE_RAW" component={Dogecoin_raw}/>
         <div className={CustomCSS.footer}>
           <h2>View Other Currencies</h2>
           <li><Link to={"/BTC"}>Bitcoin (BTC)</Link></li>

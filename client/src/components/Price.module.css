@@ -57,3 +57,10 @@
     position: relative;
     bottom: 10px;
 }
+
+.raw_data{
+    margin: auto;
+    width: 33%;
+    text-align: center;
+    background-color: cornsilk;
+}

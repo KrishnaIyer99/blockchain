@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import BitcoinCSS from './Price.module.css'
+import {Link} from 'react-router-dom';
 
 function Bitcoin(){
 
@@ -14,10 +15,13 @@ function Bitcoin(){
     return (
       <div className={BitcoinCSS.background_btc}>
         <div className={BitcoinCSS.bitcoin}>
-            <h1>Bitcoin (BTC)</h1>
-            <h4>(Refresh to update prices)</h4>
-            <h2>BUY: {initialData.BUY}</h2> 
-            <h2>SELL: {initialData.SELL}</h2> 
+          <h1>Bitcoin (BTC)</h1>
+          <h4>(Refresh to update prices)</h4>
+          <h2>BUY: {initialData.BUY}</h2> 
+          <h2>SELL: {initialData.SELL}</h2>
+          <Link to="/BTC_RAW">
+            <p>See all prices</p>
+          </Link>
         </div>
 
         <div className={BitcoinCSS.body}>

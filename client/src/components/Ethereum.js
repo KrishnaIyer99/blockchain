@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import EthereumCSS from './Price.module.css'
+import {Link} from 'react-router-dom';
 
 function Ethereum(){
 
@@ -17,7 +18,10 @@ function Ethereum(){
             <h1>Ethereum (ETH)</h1>
             <h4>(Refresh to update prices)</h4>
             <h2>BUY: {initialData.BUY}</h2> 
-            <h2>SELL: {initialData.SELL}</h2> 
+            <h2>SELL: {initialData.SELL}</h2>
+            <Link to="/ETH_RAW">
+            <p>See all prices</p>
+          </Link>
         </div>
         <div className={EthereumCSS.body}>
           <h3>About Ethereum</h3>

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import DogecoinCSS from './Price.module.css'
-
+import {Link} from 'react-router-dom';
 function Dogecoin(){
 
     const [initialData, setInitialData] = useState([{}])
@@ -14,10 +14,13 @@ function Dogecoin(){
     return (
       <div className={DogecoinCSS.background_doge}>
         <div className={DogecoinCSS.dogecoin}>
-            <h1>Dogecoin (DOGE)</h1>
-            <h4>(Refresh to update prices)</h4>
-            <h2>BUY: {initialData.BUY}</h2> 
-            <h2>SELL: {initialData.SELL}</h2> 
+          <h1>Dogecoin (DOGE)</h1>
+          <h4>(Refresh to update prices)</h4>
+          <h2>BUY: {initialData.BUY}</h2> 
+          <h2>SELL: {initialData.SELL}</h2>
+          <Link to="/DOGE_RAW">
+            <p>See all prices</p>
+          </Link>
         </div>
 
         <div className={DogecoinCSS.body}>
