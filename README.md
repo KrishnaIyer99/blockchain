@@ -10,10 +10,10 @@ Additonally, users can view all the price quotes from the various exchanges by c
 
 ## How to run:
 
-In order to run this program your system must have the following programs installed: 
+In order to run this program your system must have the following programs installed: \
     - Python3 (along with the pip package manager) \
     - Git \
-    - NodeJS (along with the yarn package manager) \
+    - NodeJS (along with the yarn package manager)
 
 1.  Start by cloning the repository:
 
@@ -23,13 +23,13 @@ In order to run this program your system must have the following programs instal
 
     cd server \
     pip install -r requirements.txt \
-    flask run \
+    flask run
 
 3.  Start frontend service
 
     cd client \
     yarn install \
-    yarn start \
+    yarn start
 
 **WARNING**: In order for program to work make sure the backend server is running on port 5000 since that is the proxy defined in package.json. If port 5000 is unavailable for whatever reason the proxy must be updated to the correct port value.
 
