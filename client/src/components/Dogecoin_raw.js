@@ -27,10 +27,10 @@ function Dogecoin_raw(){
               <li><b>$USD: </b>The quoted value of the base currency from the exchange converted to USD</li>
               <br></br>
             </div>
-        </div>
-        <Link to="/DOGE">
+          <Link to="/DOGE">
             <h3>Go back</h3>
-        </Link>
+          </Link>
+        </div>
     </div>
     );
 }

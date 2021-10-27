@@ -27,10 +27,10 @@ function Bitcoin_raw(){
               <li><b>$USD: </b>The quoted value of the base currency from the exchange converted to USD</li>
               <br></br>
             </div>
-        </div>
-        <Link to="/BTC">
+          <Link to="/BTC">
             <h3>Go back</h3>
-        </Link>
+          </Link>
+        </div>
     </div>
     );
 }
