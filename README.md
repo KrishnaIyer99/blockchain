@@ -8,7 +8,7 @@ Using the data from the API. The website recommends a Buy/Sell price for any of 
 
 Additonally, users can view all the price quotes from the various exchanges by clicking the "See all prices" link.
 
-##How to run:
+## How to run:
 
 In order to run this program your system must have the following programs installed: - Python3 (along with the pip package manager) - Git - NodeJS (along with the yarn package manager)
 
