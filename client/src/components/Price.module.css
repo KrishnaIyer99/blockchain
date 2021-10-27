@@ -60,7 +60,11 @@
 
 .raw_data{
     margin: auto;
-    width: 33%;
+    width: 50%;
     text-align: center;
     background-color: cornsilk;
+}
+
+.legend{
+    text-align: left;
 }

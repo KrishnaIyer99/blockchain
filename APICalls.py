@@ -164,5 +164,8 @@ def display_doge_raw_data():
                                 'quoteSymbol': 'Quote Symbol',
                                 'priceUsd': '$USD'
                             }, inplace=True)
-    return doge_prices_df.to_html(header="true", columns=['Exchange', 'Base Symbol', 'Quote Symbol', '$USD'], index=False)
+    raw_html = doge_prices_df.to_html(header="true", columns=['Exchange', 'Base Symbol', 'Quote Symbol', '$USD'], index=False)
+    raw_html = raw_html.replace('<tr>', '<tr align="left">')
+    raw_html = raw_html.replace('<th>', '<th align="center">')
+    return raw_html
 
