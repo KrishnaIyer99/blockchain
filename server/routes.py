@@ -135,7 +135,10 @@ def display_doge_data():
 #display all price quotes for BTC
 @app.route("/BTC_ALL")
 def display_btc_raw_data():
-    btc_prices = requests.get("http://api.coincap.io/v2/assets/bitcoin/markets").json()#API call
+    try:
+        btc_prices = requests.get("http://api.coincap.io/v2/assets/bitcoin/markets").json()#API call
+    except:
+        return "Failed to fetch price data, try refreshing!"
     btc_prices_df = data_processing(btc_prices)
     btc_prices_df = btc_prices_df.loc[btc_prices_df['baseSymbol'] == "BTC"]
     btc_prices_df = btc_prices_df.round({'priceUsd':2})
@@ -158,7 +161,10 @@ def display_btc_raw_data():
 #display all price quotes for ETH
 @app.route("/ETH_ALL")
 def display_eth_raw_data():
-    eth_prices = requests.get("http://api.coincap.io/v2/assets/ethereum/markets").json()
+    try:
+        eth_prices = requests.get("http://api.coincap.io/v2/assets/ethereum/markets").json()
+    except:
+        return "Failed to fetch price data, try refreshing!"
     eth_prices_df = data_processing(eth_prices)
     eth_prices_df = eth_prices_df.loc[eth_prices_df['baseSymbol'] == "ETH"]
     eth_prices_df = eth_prices_df.round({'priceUsd':2})
@@ -179,7 +185,10 @@ def display_eth_raw_data():
 #display all price quotes for DOGE
 @app.route("/DOGE_ALL")
 def display_doge_raw_data():
-    doge_prices = requests.get("http://api.coincap.io/v2/assets/dogecoin/markets").json()
+    try:
+        doge_prices = requests.get("http://api.coincap.io/v2/assets/dogecoin/markets").json()
+    except:
+        return "Failed to fetch price data, try refreshing!"
     doge_prices_df = data_processing(doge_prices)
     doge_prices_df = doge_prices_df.loc[doge_prices_df['baseSymbol'] == "DOGE"]
     doge_prices_df = doge_prices_df.round({'priceUsd':4})
