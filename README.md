@@ -1,6 +1,6 @@
-###blockchain - Chainalysis New Grad Assessment
+# blockchain - Chainalysis New Grad Assessment
 
-##Description:
+## Description:
 
 The following program is a website using a Flask backend (Python) and a ReactJS frontend. The APIs from which the data is retreived from come from https://coincap.io/. They provide real-time price quotes for multiple cryptocurrencies across various exchanges.
 
@@ -28,7 +28,7 @@ In order to run this program your system must have the following programs instal
     yarn install 
     yarn start
 
-#WARNING: In order for program to work make sure the back server is running on port 5000 since that is the proxy defined in package.json. If port 5000 is unavailable for whatever reason the proxy must be updated to the correct port value.
+**WARNING**: In order for program to work make sure the back server is running on port 5000 since that is the proxy defined in package.json. If port 5000 is unavailable for whatever reason the proxy must be updated to the correct port value.
 
-##Documentation:
+## Documentation:
 https://docs.coincap.io/ 
