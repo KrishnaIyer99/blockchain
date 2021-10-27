@@ -125,7 +125,14 @@ def display_btc_raw_data():
     btc_prices_df = btc_prices_df.loc[btc_prices_df['baseSymbol'] == "BTC"]
     btc_prices_df = btc_prices_df.round({'priceUsd':2})
     btc_prices_df = btc_prices_df.sort_values(by=['priceUsd'])
-    return btc_prices_df.to_html(header="true", columns=['exchangeId', 'baseSymbol', 'quoteSymbol', 'priceUsd'], index=False)
+    btc_prices_df.rename(columns=
+                            {
+                                'exchangeId': 'Exchange',
+                                'baseSymbol': 'Base Symbol',
+                                'quoteSymbol': 'Quote Symbol',
+                                'priceUsd': '$USD'
+                            }, inplace=True)
+    return btc_prices_df.to_html(header="true", columns=['Exchange', 'Base Symbol', 'Quote Symbol', '$USD'], index=False)
 
 @app.route("/ETH_ALL")
 def display_eth_raw_data():
@@ -134,7 +141,14 @@ def display_eth_raw_data():
     eth_prices_df = eth_prices_df.loc[eth_prices_df['baseSymbol'] == "ETH"]
     eth_prices_df = eth_prices_df.round({'priceUsd':2})
     eth_prices_df = eth_prices_df.sort_values(by=['priceUsd'])
-    return eth_prices_df.to_html(header="true", columns=['exchangeId', 'baseSymbol', 'quoteSymbol', 'priceUsd'], index=False)
+    eth_prices_df.rename(columns=
+                            {
+                                'exchangeId': 'Exchange',
+                                'baseSymbol': 'Base Symbol',
+                                'quoteSymbol': 'Quote Symbol',
+                                'priceUsd': '$USD'
+                            }, inplace=True)
+    return eth_prices_df.to_html(header="true", columns=['Exchange', 'Base Symbol', 'Quote Symbol', '$USD'], index=False)
 
 @app.route("/DOGE_ALL")
 def display_doge_raw_data():
@@ -143,5 +157,12 @@ def display_doge_raw_data():
     doge_prices_df = doge_prices_df.loc[doge_prices_df['baseSymbol'] == "DOGE"]
     doge_prices_df = doge_prices_df.round({'priceUsd':4})
     doge_prices_df = doge_prices_df.sort_values(by=['priceUsd'])
-    return doge_prices_df.to_html(header="true", columns=['exchangeId', 'baseSymbol', 'quoteSymbol', 'priceUsd'], index=False)
+    doge_prices_df.rename(columns=
+                            {
+                                'exchangeId': 'Exchange',
+                                'baseSymbol': 'Base Symbol',
+                                'quoteSymbol': 'Quote Symbol',
+                                'priceUsd': '$USD'
+                            }, inplace=True)
+    return doge_prices_df.to_html(header="true", columns=['Exchange', 'Base Symbol', 'Quote Symbol', '$USD'], index=False)
 
